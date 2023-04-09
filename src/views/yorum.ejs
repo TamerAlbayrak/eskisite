@@ -1,0 +1,191 @@
+<title>Taxperia Panel</title>
+
+<%- include('partials/_panelhead', {bot, user, path}) %>
+
+<aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
+  <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
+  <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
+    <img
+         class="rounded-pill img-fluid"
+         width="65"
+         src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>"
+         alt="">
+    <div class="ms-2">
+      <h5 class="fs-6 mb-0">
+        <a class="text-decoration-none" href="#"><%= user.username %></a>
+      </h5>
+      <p class="mt-1 mb-0"><%= auth %></p>
+    </div>
+  </div>
+
+  <div class="search position-relative text-center px-4 py-3 mt-2">
+    <input type="text" class="form-control w-100 border-0 bg-transparent" placeholder="Ara">
+    <i class="fa fa-search position-absolute d-block fs-6"></i>
+  </div>
+
+  <ul class="categories list-unstyled">
+    <li class="has-dropdown">
+      <i class="fas fa-home"></i><a href="#"> Moderasyon</a>
+      <ul class="sidebar-dropdown list-unstyled">
+        <li><a href="#">Küfür Engel</a></li>
+        <li><a href="#">Reklam Engel</a></li>
+        <li><a href="#">Reklam Kick</a></li>
+        <li><a href="#">Oto Bot Silici</a></li>
+        <li><a href="#">Süreli Rol</a></li>
+      </ul>
+    </li>
+    
+    <li class="has-dropdown">
+      <i class="fas fa-shield-alt"></i><a href="#"> Koruma</a>
+      <ul class="sidebar-dropdown list-unstyled">
+        <li><a href="#">Büyük Harf Engel</a></li>
+        <li><a href="#">Reklam İsmi Banı</a></li>
+        <li><a href="#">Sağ Tık Kick</a></li>
+        <li><a href="#">Anti Raid</a></li>
+        <li><a href="#">Sohbet Log</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <i class="fas fa-server"></i><a href="#"> Sunucu</a>
+      <ul class="sidebar-dropdown list-unstyled">
+        <li><a href="#">Ban Sistemi</a></li>
+        <li><a href="#">Otorol Sistemi</a></li>
+        <li><a href="#">Güvenlik Sistemi</a></li>
+        <li><a href="#">Jail Sistemi</a></li>
+        <li><a href="#">Mute Sistemi</a></li>
+      </ul>
+    </li>
+
+    <li class="">
+      <i class="fas fa-comments"></i><a href="#"> Yorumlar</a>
+    </li>
+  </ul>
+</aside>
+
+
+  <section id="wrapper">
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid mx-2">
+      <div class="navbar-header">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="uil-bars text-white"></i>
+        </button>
+        <a class="navbar-brand">Tax<span class="main-color">peria</span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="toggle-navbar">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link"><i class="far fa-bell"></i><span>0</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/anasayfa">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+
+  <div class="p-4">
+    <div class="welcome">
+      <div class="content rounded-3 p-3">
+        <h1 class="fs-3">Welcome to Dashboard</h1>
+        <p class="mb-0">Hello Jone Doe, welcome to your awesome dashboard!</p>
+      </div>
+    </div>
+
+   
+    <section class="admins mt-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box">
+            <!-- <h4>Admins:</h4> -->
+            <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148906966/small/1501685402/enhance"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">Joge Lucky</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+              </div>
+            </div>
+            <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907137/small/1501685404/enhance"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">Joge Lucky</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+              </div>
+            </div>
+            <div class="admin d-flex align-items-center rounded-2 p-3">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907019/small/1501685403/enhance"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">Joge Lucky</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <!-- <h4>Moderators:</h4> -->
+            <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907114/small/1501685404/enhance"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">Joge Lucky</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+              </div>
+            </div>
+            <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907086/small/1501685404/enhance"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">Joge Lucky</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+              </div>
+            </div>
+            <div class="admin d-flex align-items-center rounded-2 p-3">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">Joge Lucky</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </div>
+</section>

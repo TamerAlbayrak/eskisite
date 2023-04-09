@@ -1,0 +1,108 @@
+
+  
+
+<head>
+
+<%- include('partials/_header', {bot, user, path}) %>
+
+</head>
+
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+
+<center>
+  
+  <div class="features">
+
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class"col-md-12">
+          <h5 class="subtitle" style="color: #fff; margin-top: 30px; font-size: 50px;">
+          Sunucu seçimi
+          </h5> <br>
+      </div>
+    </div>
+    
+    <div class="row">
+   <% member.guilds.forEach(guild => {
+    const permsOnGuild = new perms(guild.permissions);
+    if(!permsOnGuild.has("MANAGE_GUILD")) return;
+  %>
+   <% if (bot.guilds.cache.get(guild.id)) { %>
+    <% var a = "Sunucuyu Yönet" %>
+ 
+    <% } else { %>
+        <% var a = "Sunucuya Ekle" %>
+ 
+    <% } %>
+        <% if (bot.guilds.cache.get(guild.id)) { %>
+    <% var link = `/panel?server=${guild.id}` %>
+    <% } else { %>    
+    <% var link = `https://discord.com/oauth2/authorize?scope=bot&response_type=code&redirect_uri=https://taxperia.tk/callback&permissions=8&client_id=${bot.user.id}&guild_id=${guild.id}` %>
+    <% } %>
+   <div class="col-md-4" style="float: right;">
+         <div class="card" style="width: 25rem; height: 15rem">
+   <img src="https://cdn.discordapp.com/icons/<%=guild.id%>/<%=guild.icon%>.png?size=128" style="margin-top: 20px; margin-left: 20px; width:104px;height:104px;border-radius: 150px;" onerror="this.onerror=null;this.src='https://cdn.discordapp.com/attachments/800474052509827082/807338869292269638/discord_101785.png'" alt="icon" class="w3-left w3-circle">
+       <br>    <p  style="color:#fafafa; font-size: 18px; margin-right: 12px;"> <b> <%= bot.tools.kisalt(guild.name) %> </b></p>
+  <a class="anasyfa-btyk" style="font-size: 16px; color:#AD91FF">
+     <% if (bot.guilds.cache.get(guild.id)) { %>
+     Bot sunucuda var.
+    <% } else { %>
+     Bot sunucuda yok.
+      <% } %></a> <br> <br> 
+<a href="<%=link%>" type="btn btn-info" style="text-align: center;  font-family: 'Quicksand', black;  color: #fff;" class="btn btn-info"><%= a %></a>
+
+   </div>
+      </div>
+  <% }) %>
+    </div>
+    </div>
+</center>
+
+
+<style>
+
+.anasyfa-txt {
+  	text-shadow:
+    0 0 5px #fafafa,
+    0 0 10px #fafafa;
+}
+
+.anasyfa-btyk {
+  	text-shadow:
+    0 0 5px #AD91FF,
+    0 0 10px #AD91FF;
+}
+
+
+.borderss
+{
+min-width: 250px;
+max-width: 350px;
+height:180px;
+border-radius: 30px;
+margin-left:15px;
+margin-top: 20px;
+background-image: url("https://cdn.discordapp.com/attachments/875119709002023004/881894811437768724/unnamed.gif");
+    position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -ms-transition: all .2s ease-in;
+}
+
+.border:hover
+{
+    z-index:4;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);  
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+}
+  
+</style>
+</div>

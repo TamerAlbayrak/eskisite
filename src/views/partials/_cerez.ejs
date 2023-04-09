@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://konudenizi.com/assets/other/cookieconsent.min.css">
+</head>
+<body>
+<script src="https://konudenizi.com/assets/other/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+ window.cookieconsent.initialise({
+   "palette": {
+     "popup": {
+       "background": "#222", // Uyarının arkaplan rengi
+       "text": "#ffffff" // Uyarının üzerindeki yazı rengi
+     },
+     "button": {
+       "background": "#AD91FF", // Tamam butonunun arkaplan rengi - "transparent" kullanırsanız border özelliğini açabilirsiniz.
+       //"border": "#14a7d0", // Arkaplan rengini transparent yapıp çerçeve kullanabilmek için
+      "text": "#ffffff" // Tamam butonunun yazı rengi
+     }
+   },
+   "theme": "block", // Kullanabileceğiniz temalar; block, edgeless, classic. Sitenizin görüntüsüne uygun olanı seçebilirsiniz.
+   "type": "opt-out", // Gizle uyarısını aktif etmek için
+   // "position": "top", // Aktif ederseniz uyarı üst kısımda görünür
+   //"static": true, //Aktif ederseniz uyarı üst kısımda sabit olarak görünür
+   // "position": "bottom-left", // Aktif ederseniz uyarı solda görünür.
+   //"position": "bottom-right", // Aktif ederseniz uyarı sağda görünür.
+   "content": {
+      "message": "Sitemizden en iyi şekilde faydalanabilmeniz için çerezler kullanılmaktadır. Sitemize giriş yaparak çerez kullanımını kabul etmiş sayılıyorsunuz.",
+      "dismiss": "Tamam",
+      "link": "Daha fazla bilgi",
+      "href": "/cookie-policy"
+    }
+})});
+</script>
+</body>
+</html>
