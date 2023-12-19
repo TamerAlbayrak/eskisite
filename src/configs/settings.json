@@ -1,8 +1,8 @@
  {
-  "mongoURL" : "mongodb+srv://taxperia:Tameralb567@taxperiabot.murtt.mongodb.net/taxperia?retryWrites=true&w=majority",
-  "clientID" : "840599018857037825",
-  "token" : "ODQwNTk5MDE4ODU3MDM3ODI1.YJai1w.YvH9zmNbobW0KwCDBpqY5Dw5dFY",
-  "secret" : "K_Exy1StUhpg8eT2IS0uPbJKMMZGHraH",
-  "callbackURL" : "https://taxperia.tk/callback",
+  "mongoURL" : "",
+  "clientID" : "",
+  "token" : "",
+  "secret" : "",
+  "callbackURL" : "https:/websiteurl/callback",
   "prefix" : "!"
 }
